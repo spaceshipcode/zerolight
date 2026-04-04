@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Parlaklık Kutusu (Icon + Bar) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brightnessBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/rounded_box_background"
+        android:elevation="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/brightnessIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="☀️"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:contentDescription="@string/brightness_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/brightnessSlider"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:valueFrom="3"
+            android:valueTo="379"
+            android:stepSize="1"
+            app:thumbColor="#FFFFFF"
+            app:thumbRadius="6dp"
+            app:trackColorActive="#FFFFFF"
+            app:trackColorInactive="#555555"
+            app:trackHeight="8dp"
+            app:haloColor="#40FFFFFF"
+            app:layout_constraintStart_toEndOf="@id/brightnessIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Azalt Düğmesi (< butonu) -->
+    <TextView
+        android:id="@+id/minBrightnessButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:text="&lt;"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@drawable/circular_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brightnessBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

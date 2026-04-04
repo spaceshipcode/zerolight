@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">zerolight</string>
+    <string name="tile_label">Parlaklık</string>
+    <string name="brightness_icon">Parlaklık İkonu</string>
+    <string name="lock_brightness">Parlaklığı Kilitle</string>
+</resources>
